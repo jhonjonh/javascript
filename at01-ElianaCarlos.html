@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="John Correa Gerber">
+    <title>Exercicio.</title> 
+    <script type="text/javascript">
+
+        function numeroN() {
+            var arrayN=[], arrayM = [];
+            var n = parseInt(prompt("Digite um número entre 1 e 9 para indicar a quantidade de temperaturas."));
+            while ((isNaN(n))||(n<=0)||(n>=10)){
+                n = parseInt(prompt("Valor inválido. Digite um número entre 1 e 9."));
+            }
+            var m = parseInt(prompt("Digite um número entre 1 e 9 para indicar a quantidade de nomes."));
+            while ((isNaN(m))||(m<=0)||(m>=10)){
+                m = parseInt(prompt("Valor inválido. Digite um número entre 1 e 9."));
+            }
+            var tempN= new Number;
+            for(i=0;i<n;i++){  
+                tempN = (parseFloat(prompt("Digite a temperatura ("+((i)+1)+" de "+n+").")));             
+                while (isNaN(tempN)){
+                    tempN = (parseFloat(prompt("Dado inválido. Digite a temperatura ("+((i)+1)+" de "+n+").")))  
+                }   
+                arrayN.push(tempN);
+            }    
+            for(i=0;i<m;i++){
+                arrayM.push(prompt("Digite o nome ("+((i)+1)+" de "+m+")."));
+            }
+
+            document.write("Temperaturas inseridas: "+arrayN+"<br>Nomes inseridos: "+arrayM);
+
+            var verifyM = arrayM.find(element => element == "Eliana");
+            verifyM ? document.write("<br>Nome Eliana encontrado!.") : document.write("<br>O nome Eliana não foi encontrado.");
+
+            arrayN.find(element => element > 20) ? document.write("<br>Temperaturas maiores que 20: "+arrayN.filter(element => element > 20)) : document.write("<br>Temperaturas maiores que 20: nenhuma");
+
+            var verifyM = arrayM.find(element => element == "Carlos");
+            verifyM ? document.write("<br>Nome Carlos encontrado na posição "+((arrayM.findIndex(elemento => elemento === "Carlos"))+1)+" da lista") : document.write("<br>O nome Carlos não foi encontrado.");
+
+            document.write("<br>Temperaturas ao cubo: "+arrayN.map(elementus => (Math.pow(elementus,3))));
+        }
+
+    </script>
+         
+</head>
+
+<body>
+    <button onclick="numeroN()">Clique aqui</button>
+    
+</body>
+
+</html>
