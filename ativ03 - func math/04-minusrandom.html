@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio.</title>
+    <script>
+
+        var num1 = parseFloat(prompt("Digite um número qualquer"));
+        var randomNum = (Math.random()*(1000-0)+0);
+        randomNum = randomNum.toFixed(3);
+
+        while (isNaN(num1)){
+            alert("Valor inválido! Digite novamente.")
+            num1 = parseFloat(prompt("Digite um número qualquer."));
+        }
+
+        document.write("O número digitado foi: "+num1+"<br>Número aleatório gerado entre 0 e 1000 (com 3 casas decimais): "+randomNum+"<br>Número subtraído de um número aleatório entre zero e mil: "+(randomNum-num1)+"<br>Resultado absoluto: "+(Math.abs(randomNum-num1)));
+        
+        
+
+
+    </script>
+</head>
+
+<body></body>
+
+</html>

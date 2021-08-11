@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio.</title>
+    <script type="text/javascript">
+
+        var num1 = parseFloat(prompt("Calculadora de seno, cosseno e tangente:\nDigite um valor de ângulo:"));
+
+        while (isNaN(num1)){
+            alert("Valor inválido! Digite novamente.");
+            num1 = parseFloat(prompt("Digite um número qualquer."));
+        }
+
+        var radiano = (num1 * Math.PI) / 180.0;        
+
+        document.write("Ângulo digitado: "+num1+"º<br>Em radianos: "+radiano+"<br>Seno: "+Math.sin(num1)+"<br>Cosseno: "+Math.cos(num1)+"<br>Tangente: "+Math.tan(num1));
+        
+        
+
+
+    </script>
+</head>
+
+<body></body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio.</title>
+    <script>
+
+        var num1 = parseInt(prompt("Digite o numero 1"));
+        var num2 = parseInt(prompt("Digite o numero 2"));
+
+        while (isNaN(num1)||isNaN(num2)){
+            alert("Valores inválidos! Digite-os novamente.")
+            num1 = parseInt(prompt("Digite o numero 1"));
+            num2 = parseInt(prompt("Digite o numero 2"));
+        }
+        
+        document.write("Os números digitados foram: "+num1+" e "+num2);
+        document.write("<br>A raiz quadrada (arredondada) de cada um é: "+(Math.round(Math.sqrt(num1)))+" e "+(Math.round(Math.sqrt(num2))));
+
+
+    </script>
+</head>
+
+<body></body>
+
+</html>

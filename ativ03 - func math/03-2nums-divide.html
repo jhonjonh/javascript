@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio.</title>
+    <script>
+
+        var num1 = parseFloat(prompt("Digite o numero 1"));
+        var num2 = parseFloat(prompt("Digite o numero 2"));
+
+        while (isNaN(num1)||isNaN(num2)){
+            alert("Valores inválidos! Digite-os novamente.")
+            num1 = parseFloat(prompt("Digite o numero 1"));
+            num2 = parseFloat(prompt("Digite o numero 2"));
+        }
+
+        var maior = Math.max(num1,num2);
+        var menor = Math.min(num1,num2);
+        
+        document.write("Os dois números digitados foram: "+num1+" e "+num2+"<br>A divisão do maior pelo menor (arredondada para baixo) dá: "+Math.floor(maior/menor));
+
+
+    </script>
+</head>
+
+<body></body>
+
+</html>
