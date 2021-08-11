@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="John Correa Gerber">
+    <title>Exercicio.</title> 
+    <script type="text/javascript">
+
+        //função para gerar numeros aleatórios arredondados através do Math.random()
+        function aleatorio(min, max) {
+        return Math.round(Math.random() * (max - min) + min) ;
+        }
+
+        //cria prompt para que o usuario digite a quantidade de números que deseja jogar, e proibe-o de digitar um número que não esteja entre 6 e 15.
+        var qtdNumsJogoMega = parseInt(prompt("Gerador de números da Mega-Sena!\nQuantos números deseja jogar? (mínimo: 6, máximo: 15)"));
+        while((isNaN(qtdNumsJogoMega))||(qtdNumsJogoMega<6)||(qtdNumsJogoMega>15)){
+            qtdNumsJogoMega = parseInt(prompt("Valor inválido. Digite um número entre 6 e 15"));
+        }
+        var jogoMega = new Array();
+
+        for(i=0;i<qtdNumsJogoMega;i++){
+            jogoMega.push(aleatorio(1,60))
+        }
+        document.write("Você apostou "+qtdNumsJogoMega+" números: "+jogoMega);
+
+        
+
+    </script>
+         
+</head>
+
+<body>
+    
+
+    
+</body>
+
+</html>
