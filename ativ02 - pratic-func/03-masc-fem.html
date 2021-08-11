@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio.</title>
+    <script>
+
+        function mascFem(sexo){
+            sexo = prompt("Digite M ou F");
+            sexo = sexo.toUpperCase();
+            while((sexo != "M")&&(sexo != "F")){
+                sexo = prompt("Errado! Digite M ou F");
+            }
+            if (sexo == "M"){
+                alert("Masculino!");
+            } else {
+                alert("Feminino!");
+            }
+        } 
+        mascFem();  
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

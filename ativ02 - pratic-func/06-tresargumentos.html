@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio.</title>
+    <script>
+
+    //Faça um programa, com uma função que necessite de três argumentos, e que forneça a soma desses três argumentos através de uma função. Seu script também deve fornecer a média dos três números, através de uma segunda função que chama a primeira.        
+        
+            var num1 = parseFloat(prompt("Digite o primeiro número"));
+            var num2 = parseFloat(prompt("Digite o segundo número"));
+            var num3 = parseFloat(prompt("Digite o terceiro número"));
+
+            function somaDe3(n1 , n2, n3) {
+                n1 = num1;
+                n2 = num2;
+                n3 = num3;            
+                document.write("Os três números digitados são: ", n1, n2, n3,"<br>");
+                
+            return (n1 + n2 + n3);
+            }
+
+            function mediaSoma(){
+                return document.write("Média: ", somaDe3()/3);
+            }
+            mediaSoma();
+
+
+        
+
+    </script>
+</head>
+
+<body></body>
+
+</html>

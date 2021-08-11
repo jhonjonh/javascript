@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio.</title>
+    <script>
+
+    //Faça um programa, com uma função que necessite de três argumentos, e que forneça a soma desses três argumentos através de uma função. Seu script também deve fornecer a média dos três números, através de uma segunda função que chama a primeira.        
+        
+            var num1 = parseFloat(prompt("Digite o primeiro número"));
+            var num2 = parseFloat(prompt("Digite o segundo número"));
+            var num3 = parseFloat(prompt("Digite o terceiro número"));
+
+            function maiorNumero (n1, n2, n3) {
+                n1 = num1;
+                n2 = num2;
+                n3 = num3;
+                var maior = 0;
+                if ((n1 > n2)&&(n1 > n3)) {
+                    maior = n1;
+                }
+                if ((n2 > n1)&&(n2 > n3)) {
+                    maior = n2;
+                }
+                if ((n3 > n1)&&(n3 > n2)) {
+                    maior = n3;
+                }
+                return (maior);
+            }
+            
+            function menorNumero (n1, n2, n3) {
+                n1 = num1;
+                n2 = num2;
+                n3 = num3;
+                var menor = 0;
+                if ((n1 < n2)&&(n1 < n3)) {
+                    menor = n1;
+                }
+                if ((n2 < n1)&&(n2 < n3)) {
+                    menor= n2;
+                }
+                if ((n3 < n1)&&(n3 < n2)) {
+                    menor = n3;
+                }
+                return (menor);
+            }
+
+            document.write("Maior número: ", maiorNumero(),"<br>Menor número: ", menorNumero());
+
+
+
+        
+
+    </script>
+</head>
+
+<body></body>
+
+</html>
