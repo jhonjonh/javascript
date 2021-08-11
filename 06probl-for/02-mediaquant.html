@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio laços for.</title>
+    <script>
+
+        //2 - Desenvolver um algoritmo onde o usuário determina quantidade de valores que será solicitado ao usuário. Calcule e escreva a
+        //média aritmética dos valores lidos, a quantidade de valores positivos, a quantidade de valores negativos./
+
+        var qtdval = parseFloat(prompt("Digite uma quantidade de valores a serem digitados entre 1 e 200"));
+
+        while ((isNaN(qtdval)) || (qtdval <= 0) || (qtdval > 200)) {
+            qtdval = parseInt(prompt("Valor incorreto! Digite um valor positivo entre 1 e 200 Ex: (5)"));
+        }
+
+        var somaval = 0;
+        var somapos = 0;
+        var somaneg = 0;
+        var somazero = 0;
+        var somatotal = 0;
+
+        for (i = 1; i <= qtdval; i++) {
+            somaval = parseFloat(prompt("Digite o valor " + i + " de " + qtdval));
+
+            somatotal += somaval;
+
+            if (somaval<0){
+                somaneg++
+            } else if (somaval==0) {
+                somazero++
+            } else {
+                somapos++
+            }
+               
+        }
+        document.write("Foram lidos " + qtdval + " valores. A média dos valores lidos é " + somatotal / qtdval + " com " + somaneg + " valores negativos, " + somapos + " valores positivos e " + somazero + " zeros.");
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

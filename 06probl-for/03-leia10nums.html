@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio laços for.</title>
+    <script>
+
+        //3 - Escrever um algoritmo que leia 10 números e conte quantos deles
+        //estão nos seguintes intervalos: [0-25], [26-50], [51-75] e [76-100]. A entrada de dados deve
+        //informar ao usuário quando o numero lido um número negativo.
+
+        var numero = 0;
+        var intervNeg = 0;
+        var interv1 = 0;
+        var interv2 = 0;
+        var interv3 = 0;
+        var interv4 = 0;
+
+        for (i = 1; i <= 10; i++){
+            numero = prompt("Digite o número "+i+" de 10.");
+
+            if(numero<0){
+                alert("Número negativo digitado!");
+                intervNeg++;
+            } else if (numero<=25) {
+                interv1++;
+            } else if (numero<=50) {
+                interv2++;
+            } else if (numero<=75) {
+                interv3++;
+            } else if (numero<=100) {
+                interv4++;
+            } else {
+
+            }
+        }
+        document.write("Números entre:<br>0-25: "+interv1+"<br>26-50: "+interv2+"<br>51-75: "+interv3+"<br>76-100: "+interv4+"<br>Negativos: "+intervNeg);
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
