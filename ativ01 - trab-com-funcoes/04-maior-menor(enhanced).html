@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio.</title>
+    <script>
+
+        //funcao imprime
+        function imprime(texto) {
+            return (document.write(texto));
+        }
+
+        //funcao maior menor
+        function maioridade(ano) {
+            ano = parseInt(prompt("Digite o ano de nascimento"));
+                while((isNaN(ano))||(ano>2021)||(ano<1891)){
+                    ano = parseInt(prompt("Digite um ano de nascimento válido. (valor positivo e acima de 1890)"));
+                }
+                if ((2021-ano) < 18){
+                    return(imprime("Menor de idade ("+(2021-ano)+" anos)"));
+                } else {
+                    return(imprime("Maior de idade ("+(2021-ano)+" anos)"));
+                }
+
+        }
+        
+        maioridade();
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
